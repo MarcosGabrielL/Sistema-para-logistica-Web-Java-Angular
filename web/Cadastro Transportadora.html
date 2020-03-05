@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>GibGas - Criar Conta</title>
+        
+	<meta charset="UTF-8">
+        <link rel='shortcut icon' type='image/x-icon' href="http://localhost:8080/GibGas/resources/imagens/favicon16.ico"/>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="Paginas/contatoConta/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/vendor/noui/nouislider.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/css/util.css">
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body style="zoom: 90%;">
+
+
+	<div class="container-contact100">
+		<div style="min-height: 500px;" class="wrap-contact100">
+			<form class="contact100-form validate-form" action="profile/controller/Cadastro_Cliente_controller.jsp" method="POST">
+				<span style="color: #079bd3;" class="contact100-form-title">
+					Crie sua Conta
+				</span>
+
+                                <div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Categoria</span>
+					<div>
+						<select id="choice" class="js-select2" name="pacote">
+                                                        <option > </option>
+                                                        <option value="Emitente">Emitente</option>
+                                                        <option value="Entregador">Entregador</option>
+                                                        <option value="Transportadora">Transportadora</option>
+                                                        <option value="Centro de Destribuição">Centro de Distribuição</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div>
+             <!-- DIV PARA EMITENTE -->
+            <div  class="container-contact100 wrap-contact100" id="Emitente"  style="min-height: 10px; padding: 0; display: none;">
+                <span style="color: #079bd3; text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;" class="contact100-form-title">
+					Identificação Emitente
+				</span>
+                <div class="wrap-input100 validate-input bg1" data-validate="Por favor digite seu nome">
+					<span class="label-input100">NOME COMPLETO</span>
+					<input class="input100" type="text" name="nome" placeholder="Digite seu nome">
+				</div>
+                <div class="wrap-input100 validate-input bg1" data-validate="Por favor digite seu nome">
+					<span class="label-input100">EMAIL</span>
+					<input class="input100" type="text" name="email" placeholder="Digite e-mail">
+                                        <a></a>
+				</div>
+				<div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">CPF</span>
+					<input class="input100" type="text" name="cpf" placeholder="Digite seu CPF">
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">TELEFONE</span>
+					<input class="input100" type="text" name="telefone" placeholder="Digite seu Telefone">
+				</div>
+                <span style="color: #079bd3; text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;" class="contact100-form-title">
+					Endereço
+				</span>
+                <div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">CEP</span>
+					<input class="input100" type="text" name="cep" placeholder="Digite seu CEP">
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">ESTADO</span>
+					<input class="input100" type="text" name="estado" >
+				</div>
+                <div class="wrap-input100 validate-input bg1" data-validate="Por favor digite seu nome">
+					<span class="label-input100">LOGRADOURO</span>
+					<input class="input100" type="text" name="endereco" >
+				</div>
+                
+                <div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">CIDADE</span>
+					<input class="input100" type="text" name="cidade" >
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">BAIRRO</span>
+                                        <input class="input100" type="text" name="bairro" >
+				</div>
+                <div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Insira seu email (e@a.x)">
+					<span class="label-input100">COMPLEMENTO</span>
+                                        <input class="input100" type="text" name="complemento" >
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">NUMERO</span>
+                                        <input class="input100" type="text" name="numero" placeholder="Digit o numero" >
+				</div>
+                <span style="color: #079bd3; text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;" class="contact100-form-title">
+					Conta
+				</span>
+                <div style="margin-right: 60%;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Insira seu email (e@a.x)">
+					<span class="label-input100">Usuario</span>
+					<input class="input100" type="text" name="user" >
+				</div>
+                <div style="margin-right: 30px;"class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">Senha</span>
+					<input class="input100" type="password" name="pass" >
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">Confirmação Senha</span>
+					<input class="input100" type="password" name="csenha" >
+				</div>
+                
+				
+            </div>
+              <!-- DIV PARA ENTREGADOR -->
+            <div  class="container-contact100 wrap-contact100" id="Entregador"  style="min-height: 10px; padding: 0; display: none;">
+                <span style="color: #079bd3; text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;" class="contact100-form-title">
+					Identificação Entregador
+				</span>
+                <div class="wrap-input100 validate-input bg1" data-validate="Por favor digite seu nome">
+					<span class="label-input100">NOME COMPLETO</span>
+					<input class="input100" type="text" name="nome" placeholder="Digite seu nome">
+				</div>
+                <div class="wrap-input100 validate-input bg1" data-validate="Por favor digite seu nome">
+					<span class="label-input100">EMAIL</span>
+					<input class="input100" type="text" name="email" placeholder="Digite e-mail">
+                                        <a></a>
+				</div>
+				<div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">CPF</span>
+					<input class="input100" type="text" name="cpf" placeholder="Digite seu CPF">
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">TELEFONE</span>
+					<input class="input100" type="text" name="telefone" placeholder="Digite seu Telefone">
+				</div>
+                <span style="color: #079bd3; text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;" class="contact100-form-title">
+					Endereço
+				</span>
+                <div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">CEP</span>
+					<input class="input100" type="text" name="cep" placeholder="Digite seu CEP">
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">ESTADO</span>
+					<input class="input100" type="text" name="estado" >
+				</div>
+                <div class="wrap-input100 validate-input bg1" data-validate="Por favor digite seu nome">
+					<span class="label-input100">LOGRADOURO</span>
+					<input class="input100" type="text" name="endereco" >
+				</div>
+                
+                <div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">CIDADE</span>
+					<input class="input100" type="text" name="cidade" >
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">BAIRRO</span>
+                                        <input class="input100" type="text" name="bairro" >
+				</div>
+                <div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Insira seu email (e@a.x)">
+					<span class="label-input100">COMPLEMENTO</span>
+                                        <input class="input100" type="text" name="complemento" >
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">NUMERO</span>
+                                        <input class="input100" type="text" name="numero" placeholder="Digit o numero" >
+				</div>
+                <span style="color: #079bd3; text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;" class="contact100-form-title">
+					Conta
+				</span>
+                <div style="margin-right: 60%;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Insira seu email (e@a.x)">
+					<span class="label-input100">Usuario</span>
+					<input class="input100" type="text" name="user" >
+				</div>
+                <div style="margin-right: 30px;"class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">Senha</span>
+					<input class="input100" type="password" name="pass" >
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">Confirmação Senha</span>
+					<input class="input100" type="password" name="csenha" >
+				</div>
+                <span style="color: #079bd3; text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;" class="contact100-form-title">
+					Veiculo
+				</span>
+                <div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Categoria</span>
+					<div>
+						<select id="veiculo" class="js-select2" name="categoria">
+                                                        <option > </option>
+                                                        <option value="Automovel">Automovel</option>
+                                                        <option value="Bicicleta">Bicicleta</option>
+                                                        <option value="A pé">A pé</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div>
+                <!-- Veiculo -->
+             <div class="container-contact100 wrap-contact100" id="Veiculo"  style="min-height: 10px; padding: 0; display: none;">
+                  <div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Tipo</span>
+					<div>
+						<select id="tipo_veiculo" class="js-select2" name="tipo_veiculo">
+                                                        <option value="Automovel">Carro</option>
+                                                        <option value="Bicicleta">Moto</option>
+                                                        <option value="A pé">Caminhão</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div>
+                 <div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">PLACA</span>
+					<input class="input100" type="text" name="placa" >
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">MARCA</span>
+					<input class="input100" type="text" name="marca" >
+				</div>
+                 <div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">MODELO</span>
+					<input class="input100" type="text" name="modelo" >
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">COR</span>
+					<input class="input100" type="text" name="cor" >
+				</div>
+             </div>  
+                 <!-- Bicicleta -->
+             <div  class="container-contact100 wrap-contact100" id="Bicicleta"  style="min-height: 10px; padding: 0; display: none;">
+             </div> 
+                  <!-- A pé -->
+             <div class="container-contact100 wrap-contact100" id="pe"  style="min-height: 10px; padding: 0; display: none;">
+             </div> 
+                
+                		
+            </div>
+               <!-- DIV PARA tRANSPORTADORA -->
+            <div  class="container-contact100 wrap-contact100" id="Transportadora"  style="min-height: 10px; padding: 0; display: none;">
+                <span style="color: #079bd3; text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;" class="contact100-form-title">
+					Identificação Transportadora
+				</span>
+                <div class="wrap-input100 validate-input bg1" data-validate="Por favor digite seu nome">
+					<span class="label-input100">NOME COMPLETO</span>
+					<input class="input100" type="text" name="nome" placeholder="Digite seu nome">
+				</div>
+                <div class="wrap-input100 validate-input bg1" data-validate="Por favor digite seu nome">
+					<span class="label-input100">EMAIL</span>
+					<input class="input100" type="text" name="email" placeholder="Digite e-mail">
+                                        <a></a>
+				</div>
+				<div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">CPF</span>
+					<input class="input100" type="text" name="cpf" placeholder="Digite seu CPF">
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">TELEFONE</span>
+					<input class="input100" type="text" name="telefone" placeholder="Digite seu Telefone">
+				</div>
+                <span style="color: #079bd3; text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;" class="contact100-form-title">
+					Endereço
+				</span>
+                <div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">CEP</span>
+					<input class="input100" type="text" name="cep" placeholder="Digite seu CEP">
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">ESTADO</span>
+					<input class="input100" type="text" name="estado" >
+				</div>
+                <div class="wrap-input100 validate-input bg1" data-validate="Por favor digite seu nome">
+					<span class="label-input100">LOGRADOURO</span>
+					<input class="input100" type="text" name="endereco" >
+				</div>
+                
+                <div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">CIDADE</span>
+					<input class="input100" type="text" name="cidade" >
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">BAIRRO</span>
+                                        <input class="input100" type="text" name="bairro" >
+				</div>
+                <div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Insira seu email (e@a.x)">
+					<span class="label-input100">COMPLEMENTO</span>
+                                        <input class="input100" type="text" name="complemento" >
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">NUMERO</span>
+                                        <input class="input100" type="text" name="numero" placeholder="Digit o numero" >
+				</div>
+                <span style="color: #079bd3; text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;" class="contact100-form-title">
+					Conta
+				</span>
+                <div style="margin-right: 60%;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Insira seu email (e@a.x)">
+					<span class="label-input100">Usuario</span>
+					<input class="input100" type="text" name="user" >
+				</div>
+                <div style="margin-right: 30px;"class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">Senha</span>
+					<input class="input100" type="password" name="pass" >
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">Confirmação Senha</span>
+					<input class="input100" type="password" name="csenha" >
+				</div>
+                
+				
+            </div>
+                <!-- DIV PARA cd -->
+            <div  class="container-contact100 wrap-contact100" id="CD"  style="min-height: 10px; padding: 0; display: none;">
+                <span style="color: #079bd3; text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;" class="contact100-form-title">
+					Identificação Centro de Destribuição
+				</span>
+                <div class="wrap-input100 validate-input bg1" data-validate="Por favor digite seu nome">
+					<span class="label-input100">NOME COMPLETO</span>
+					<input class="input100" type="text" name="nome" placeholder="Digite seu nome">
+				</div>
+                <div class="wrap-input100 validate-input bg1" data-validate="Por favor digite seu nome">
+					<span class="label-input100">EMAIL</span>
+					<input class="input100" type="text" name="email" placeholder="Digite e-mail">
+                                        <a></a>
+				</div>
+				<div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">CPF</span>
+					<input class="input100" type="text" name="cpf" placeholder="Digite seu CPF">
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">TELEFONE</span>
+					<input class="input100" type="text" name="telefone" placeholder="Digite seu Telefone">
+				</div>
+                <span style="color: #079bd3; text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;" class="contact100-form-title">
+					Endereço
+				</span>
+                <div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">CEP</span>
+					<input class="input100" type="text" name="cep" placeholder="Digite seu CEP">
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">ESTADO</span>
+					<input class="input100" type="text" name="estado" >
+				</div>
+                <div class="wrap-input100 validate-input bg1" data-validate="Por favor digite seu nome">
+					<span class="label-input100">LOGRADOURO</span>
+					<input class="input100" type="text" name="endereco" >
+				</div>
+                
+                <div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">CIDADE</span>
+					<input class="input100" type="text" name="cidade" >
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">BAIRRO</span>
+                                        <input class="input100" type="text" name="bairro" >
+				</div>
+                <div style="margin-right: 30px;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Insira seu email (e@a.x)">
+					<span class="label-input100">COMPLEMENTO</span>
+                                        <input class="input100" type="text" name="complemento" >
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">NUMERO</span>
+                                        <input class="input100" type="text" name="numero" placeholder="Digit o numero" >
+				</div>
+                <span style="color: #079bd3; text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;" class="contact100-form-title">
+					Conta
+				</span>
+                <div style="margin-right: 60%;" class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Insira seu email (e@a.x)">
+					<span class="label-input100">Usuario</span>
+					<input class="input100" type="text" name="user" >
+				</div>
+                <div style="margin-right: 30px;"class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">Senha</span>
+					<input class="input100" type="password" name="pass" >
+				</div>
+                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+					<span class="label-input100">Confirmação Senha</span>
+					<input class="input100" type="password" name="csenha" >
+				</div>
+                
+				
+            </div>
+				
+
+				<div style="display: none; margin-top: 50px;" id="sub" class="container-contact100-form-btn">
+					<input class="contact100-form-btn" style="color: #ffffff; background: #079bd3;
+                                               cursor: pointer !important;
+                                               " type="submit" value="Enviar">
+						
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+    <script>
+        var iChoice = document.getElementById("choice");
+        
+	iChoice.onchange = function(){
+		if(this.value === "Emitente"){
+			document.getElementById("Emitente").style.display = 'inherit';
+                        document.getElementById("Entregador").style.display = 'none';
+                        document.getElementById("Transportadora").style.display = 'none';
+                        document.getElementById("CD").style.display = 'none';
+                        document.getElementById("sub").style.display = 'inherit';
+		}
+                if(this.value === "Entregador"){
+			document.getElementById("Emitente").style.display = 'none';
+                        document.getElementById("Entregador").style.display = 'inherit';
+                        document.getElementById("Transportadora").style.display = 'none';
+                        document.getElementById("CD").style.display = 'none';
+                       // document.getElementById("sub").style.display = 'inherit';
+		}
+                if(this.value === "Transportadora"){
+			document.getElementById("Emitente").style.display = 'none';
+                        document.getElementById("Entregador").style.display = 'none';
+                        document.getElementById("Transportadora").style.display = 'inherit';
+                        document.getElementById("CD").style.display = 'none';
+                      //  document.getElementById("sub").style.display = 'inherit';
+		}
+                if(this.value === "Centro de Destribuição"){
+			document.getElementById("Emitente").style.display = 'none';
+                        document.getElementById("Entregador").style.display = 'none';
+                        document.getElementById("Transportadora").style.display = 'none';
+                        document.getElementById("CD").style.display = 'inherit';
+                      //  document.getElementById("sub").style.display = 'inherit';
+		}
+	};
+        </script>
+        
+        <script>
+            var vei = document.getElementById("veiculo");
+        
+        vei.onchange = function(){
+            if(this.value === "Automovel"){
+                document.getElementById("Veiculo").style.display = 'inherit';
+                document.getElementById("Bicicleta").style.display = 'none';
+                document.getElementById("pe").style.display = 'none';
+                 
+            }
+            if(this.value === "Bicicleta"){
+                document.getElementById("Veiculo").style.display = 'none';
+                document.getElementById("Bicicleta").style.display = 'inherit';
+                document.getElementById("pe").style.display = 'none';
+                 document.getElementById("sub").style.display = 'inherit';
+            }
+            if(this.value === "A pé"){
+                 document.getElementById("Veiculo").style.display = 'none';
+                document.getElementById("Bicicleta").style.display = 'none';
+                document.getElementById("pe").style.display = 'inherit';
+                 document.getElementById("sub").style.display = 'inherit';
+            }
+            
+        };
+            </script>
+<!--===============================================================================================-->
+	<script src="Paginas/contatoConta/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Paginas/contatoConta/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Paginas/contatoConta/vendor/bootstrap/js/popper.js"></script>
+	<script src="Paginas/contatoConta/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Paginas/contatoConta/vendor/select2/select2.min.js"></script>
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+
+
+			$(".js-select2").each(function(){
+				$(this).on('select2:close', function (e){
+					if($(this).val() == "Please chooses") {
+						$('.js-show-service').slideUp();
+					}
+					else {
+						$('.js-show-service').slideUp();
+						$('.js-show-service').slideDown();
+					}
+				});
+			});
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="Paginas/contatoConta/vendor/daterangepicker/moment.min.js"></script>
+	<script src="Paginas/contatoConta/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="Paginas/contatoConta/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="Paginas/contatoConta/vendor/noui/nouislider.min.js"></script>
+	<script>
+	    var filterBar = document.getElementById('filter-bar');
+
+	    noUiSlider.create(filterBar, {
+	        start: [ 1500, 3900 ],
+	        connect: true,
+	        range: {
+	            'min': 1500,
+	            'max': 7500
+	        }
+	    });
+
+	    var skipValues = [
+	    document.getElementById('value-lower'),
+	    document.getElementById('value-upper')
+	    ];
+
+	    filterBar.noUiSlider.on('update', function( values, handle ) {
+	        skipValues[handle].innerHTML = Math.round(values[handle]);
+	        $('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
+	        $('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
+	    });
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>

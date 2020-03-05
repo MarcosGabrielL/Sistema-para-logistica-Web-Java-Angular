@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>GibGas - Criar Conta</title>
+        
+	<meta charset="UTF-8">
+        <link rel='shortcut icon' type='image/x-icon' href="http://localhost:8080/GibGas/resources/imagens/favicon16.ico"/>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="Paginas/contatoConta/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/vendor/noui/nouislider.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/css/util.css">
+	<link rel="stylesheet" type="text/css" href="Paginas/contatoConta/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body style="zoom: 90%;">
+
+
+	<div class="container-contact100">
+		<div style="min-height: 500px;" class="wrap-contact100">
+				<span style="color: #079bd3;" class="contact100-form-title">
+					Crie sua Conta
+				</span>
+
+                                <div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Categoria</span>
+					<div>
+						<select id="choice" class="js-select2" name="pacote">
+                                                        <option > </option>
+                                                        <option value="Emitente">Emitente</option>
+                                                        <option value="Entregador">Entregador</option>
+                                                        <option value="Transportadora">Transportadora</option>
+                                                        <option value="Centro de Destribuição">Centro de Distribuição</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div>
+		</div>
+	</div>
+
+
+    <script>
+        var iChoice = document.getElementById("choice");
+        
+	iChoice.onchange = function(){
+		if(this.value === "Emitente"){
+			window.open('http://localhost:8080/GibGas/Cadastro%20Emitente.html');
+		}
+                if(this.value === "Entregador"){
+			window.open('http://localhost:8080/GibGas/Cadastro%20Entregador.html');
+		}
+                if(this.value === "Transportadora"){
+			window.open('#');
+		}
+                if(this.value === "Centro de Destribuição"){
+			window.open('#');
+		}
+	};
+        </script>
+        
+      
+<!--===============================================================================================-->
+	<script src="Paginas/contatoConta/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Paginas/contatoConta/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Paginas/contatoConta/vendor/bootstrap/js/popper.js"></script>
+	<script src="Paginas/contatoConta/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Paginas/contatoConta/vendor/select2/select2.min.js"></script>
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+
+
+			$(".js-select2").each(function(){
+				$(this).on('select2:close', function (e){
+					if($(this).val() == "Please chooses") {
+						$('.js-show-service').slideUp();
+					}
+					else {
+						$('.js-show-service').slideUp();
+						$('.js-show-service').slideDown();
+					}
+				});
+			});
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="Paginas/contatoConta/vendor/daterangepicker/moment.min.js"></script>
+	<script src="Paginas/contatoConta/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="Paginas/contatoConta/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="Paginas/contatoConta/vendor/noui/nouislider.min.js"></script>
+	<script>
+	    var filterBar = document.getElementById('filter-bar');
+
+	    noUiSlider.create(filterBar, {
+	        start: [ 1500, 3900 ],
+	        connect: true,
+	        range: {
+	            'min': 1500,
+	            'max': 7500
+	        }
+	    });
+
+	    var skipValues = [
+	    document.getElementById('value-lower'),
+	    document.getElementById('value-upper')
+	    ];
+
+	    filterBar.noUiSlider.on('update', function( values, handle ) {
+	        skipValues[handle].innerHTML = Math.round(values[handle]);
+	        $('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
+	        $('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
+	    });
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
